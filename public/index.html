@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>URL shortener</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>URL shortener | microservices</title>
 </head>
+
 <body>
-  <h1>URL shortener</h1>
+  <h1>URL shortener Microservices</h1>
+  <main>
+    <form action="api/shorturl" method="POST">
+      <fieldset>
+        <legend>URL Shortener</legend>
+        <label for="url">URL:</label>
+        <input type="text"
+          name="url">
+          <input type="submit" value="POST URL">
+      </fieldset>
+    </form>
+  </main>
 </body>
+
 </html>

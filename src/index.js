@@ -7,7 +7,8 @@ dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
+import indexRoutes from './routes/indexRoutes.js'
+import apiRoutes from './routes/apiRoutes.js'
 
 
 // middlewares
@@ -16,7 +17,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 // routes
-// app.use()
+app.use(indexRoutes);
+app.use('/api', apiRoutes);
 
 // default page for anywhere address
 app.use((req, res)=>{
